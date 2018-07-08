@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				/*
+					过渡动画： 属性 持续时间 动画时间函数 动画延迟时间
+				*/
+				transition: width 2s linear,
+							height 2s linear 2s,
+							border-radius 2s linear 4s;
+			}
+
+			/* 鼠标悬浮在元素上方时的效果 */
+			div:hover {
+				width: 600px;
+				height: 600px;
+				border-radius: 300px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		
+		<div></div>
+
+	</body>
+</html>

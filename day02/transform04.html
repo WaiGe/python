@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2d</title>
+		<style>
+			
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/*transition: 2s;*/
+				animation: translate 2s linear infinite;
+			}
+
+			div:hover {
+				/*
+					transform: 形变;
+					translate: 平移;
+					rotate: 旋转;
+					skew: 倾斜;
+					scale： 缩放
+				*/
+				/*transform: translateX(300px) translateY(300px) rotate(720deg) skewX(45deg) skewY(45deg) scale(0);*/
+
+			}
+
+			@keyframes translate {
+				25% {
+					transform: translateX(400px) rotate(360deg);
+				}
+
+				50% {
+					transform: translateX(400px) translateY(400px) rotate(50deg);
+				}
+
+				75% {
+					transform: translateX(0px) translateY(400px) rotate(360deg);
+				}
+
+				100% {
+					transform: translateX(0px) translateY(0px) rotate(0deg);
+				}
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		
+		<div></div>
+
+
+
+	</body>
+
+
+</html>
