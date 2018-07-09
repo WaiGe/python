@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>立方体</title>
+		<style>
+			body {
+				background-color: black;
+			}
+			.box {
+				width: 200px;
+				height: 200px;
+				/*background-color: pink;*/
+				margin: 100px auto 0;
+				/* 想要看到3d效果，需要给元素的父级添加该样式 */
+				transform-style: preserve-3d;
+				transform: rotateY(45deg) rotateX(-45deg);
+				animation: rotate 2s linear infinite;
+			}
+			
+			/* 子代选择器 */
+			.box>div {
+				width: 200px;
+				height: 200px;
+				/* 让元素重叠在一起 */
+				position: absolute;
+				/* 文本左右居中 */
+				text-align: center;
+				/* 行高 */
+				line-height: 200px;
+				font-size: 50px;
+				/* 字体加粗 */
+				font-weight: bold;
+				color: purple;
+				/* 透明度 */
+				opacity: .6;
+				/* 背面可见性 hidden是隐藏的意思 */
+				/*backface-visibility: hidden;*/
+			}
+
+			.red {
+				transform: translateZ(100px);
+				background-color: red;
+			}
+
+			.orange {
+				transform: rotateY(180deg) translateZ(100px);
+				background-color: orange;
+			}
+
+			.yellow {
+				transform: rotateY(-90deg) translateZ(100px);
+				background-color: yellow;
+			}
+
+			.white {
+				transform: rotateY(90deg) translateZ(100px);
+				background-color: white;
+			}
+
+			.blue {
+				transform: rotateX(90deg) translateZ(100px);
+				background-color: blue;
+			}
+
+			.green {
+				transform: rotateX(-90deg) translateZ(100px);
+				background-color: green;
+			}
+
+
+			@keyframes rotate {
+
+
+				to {
+					transform: rotateY(405deg) rotateX(315deg);
+				}
+			}
+
+
+
+
+		</style>
+	</head>
+	<body>
+		
+
+		<div class="box">
+			
+			<div class="red">1</div>
+			<div class="orange">2</div>
+			<div class="yellow">3</div>
+			<div class="white">4</div>
+			<div class="blue">5</div>
+			<div class="green">6</div>
+
+		</div>
+
+
+
+	</body>
+
+</html>
