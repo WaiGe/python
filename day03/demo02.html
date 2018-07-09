@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+
+			body {
+				/* 观察的区域 */
+				perspective-origin: 300px 300px;
+				/* 观察的距离 */
+				perspective: 800px;
+			}
+			
+			.box {
+				/*width: 150px;*/
+				/*height: 240px;*/
+				position: absolute;
+				left: 300px;
+				top: 200px;
+				transform-style: preserve-3d;
+				transform: rotateX(-45deg);
+				animation: rotate 20s linear infinite;
+			}
+
+			img {
+				position: absolute;
+				width: 150px;
+				height: 240px;
+			}
+
+			div>img:nth-child(1) { 
+				transform: rotateY(0deg) translateZ(400px); 
+			}
+			div>img:nth-child(2) { 
+				transform: rotateY(30deg) translateZ(400px); 
+			}
+			div>img:nth-child(3) { 
+				transform: rotateY(60deg) translateZ(400px); 
+			}
+			div>img:nth-child(4) { 
+				transform: rotateY(90deg) translateZ(400px); 
+			}
+			div>img:nth-child(5) { 
+				transform: rotateY(120deg) translateZ(400px); 
+			}
+			div>img:nth-child(6) { 
+				transform: rotateY(150deg) translateZ(400px); 
+			}
+			div>img:nth-child(7) { 
+				transform: rotateY(180deg) translateZ(400px); 
+			}
+			div>img:nth-child(8) { 
+				transform: rotateY(210deg) translateZ(400px); 
+			}
+			div>img:nth-child(9) { 
+				transform: rotateY(240deg) translateZ(400px); 
+			}
+			div>img:nth-child(10) { 
+				transform: rotateY(270deg) translateZ(400px); 
+			}
+			div>img:nth-child(11) { 
+				transform: rotateY(300deg) translateZ(400px); 
+			}
+			div>img:nth-child(12) { 
+				transform: rotateY(330deg) translateZ(400px); 
+			}
+
+
+			@keyframes rotate {
+				from {
+					transform: rotateX(45deg) rotateY(0deg);
+				}
+
+				to {
+					transform: rotateX(45deg) rotateY(360deg);
+				}
+			}
+
+
+			@keyframes rotateR {
+				from {
+					transform: rotateX(-45deg) rotateY(0deg);
+				}
+
+				to {
+					transform: rotateX(-45deg) rotateY(360deg);
+				}
+			}
+
+
+			.right {
+				left: 500px;
+				transform: rotateX(45deg);
+				animation: rotateR 20s linear infinite;
+			}
+
+			.a {
+				width: 10px;
+				height: 10px;
+				background: red;
+			}
+
+			.b {
+				width: 100px;
+				height: 100px;
+				background: black;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+
+		<div class="box">
+
+			<img src="img/1.jpg" alt="">
+			<img src="img/2.jpg" alt="">
+			<img src="img/3.jpg" alt="">
+			<img src="img/4.jpg" alt="">
+			<img src="img/5.jpg" alt="">
+			<img src="img/6.jpg" alt="">
+			<img src="img/7.jpg" alt="">
+			<img src="img/8.jpg" alt="">
+			<img src="img/9.jpg" alt="">
+			<img src="img/10.jpg" alt="">
+			<img src="img/11.jpg" alt="">
+			<img src="img/12.jpg" alt="">
+			
+		</div>
+
+
+		<div class="box right">
+
+			<img src="img/1.jpg" alt="">
+			<img src="img/2.jpg" alt="">
+			<img src="img/3.jpg" alt="">
+			<img src="img/4.jpg" alt="">
+			<img src="img/5.jpg" alt="">
+			<img src="img/6.jpg" alt="">
+			<img src="img/7.jpg" alt="">
+			<img src="img/8.jpg" alt="">
+			<img src="img/9.jpg" alt="">
+			<img src="img/10.jpg" alt="">
+			<img src="img/11.jpg" alt="">
+			<img src="img/12.jpg" alt="">
+			
+		</div>
+		
+
+		
+	</body>
+</html>
+<script>
+	
+	// for (var i = 0; i < 12; i++) {
+	// 	var str = "div>img:nth-child(" + (i + 1) + ") { transform: rotateY(" + i * 30 +  "deg) translateZ(300px); }";
+	// 	document.write(str + "<br>");
+	// }
+
+
+
+
+
+</script>
